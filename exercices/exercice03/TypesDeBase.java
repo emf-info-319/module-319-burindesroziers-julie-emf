@@ -9,3 +9,5 @@ public class TypesDeBase {
         System.out.println("Dans 10 ans, j'aurai "+age10+".");
     }
 }
+/*commentaire inutile
+sur deux lignes*/
