@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "exercice07",
         "exercice05",
         "exercice04",
         "exercice01",
-        "exercice07"
+        "exercice08"
     ]
 }

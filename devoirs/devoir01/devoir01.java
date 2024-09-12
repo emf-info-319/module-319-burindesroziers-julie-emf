@@ -2,7 +2,7 @@ public class devoir01 {
     public static void main(String[] args) {
         int monAge = 29;
         boolean estMajeur;
-        if (monAge >= 20) {
+        if (monAge > 20) {
             estMajeur = true;
         } else {
             estMajeur = false;
@@ -15,7 +15,7 @@ public class devoir01 {
             System.out.println("Je ne suis pas encore majeur.");
         }
         int monAge2 = 30;
-        boolean estMajeur2 = (monAge2 >= 20);
+        boolean estMajeur2 = (monAge2 > 20);
         System.out.println("Je m'appelle BdR Donatien.");
         System.out.println("Mon âge est de : " + monAge2 + " ans");
         if (estMajeur2) {
