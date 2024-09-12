@@ -16,7 +16,7 @@ public class Exercice08Exercice1 {
         for (int i = 1; i < 6; i++) {
             if (i < 3 || i > 3) {
                 System.out.println("Boucle for, itération " + i);
-            }
+            }//ici il fallait utiliser un i==3 et un continue
         }
         int nombre3 = 1;
         while (nombre3 < 6) {
@@ -24,6 +24,6 @@ public class Exercice08Exercice1 {
                 System.out.println("Boucle while, itération " + nombre3);
             }
             nombre3++;
-        }
+        }//ici il fallait utiliser un break
     }
 }
