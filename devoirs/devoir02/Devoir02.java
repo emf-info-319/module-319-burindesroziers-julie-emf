@@ -14,12 +14,14 @@ public class Devoir02 {
             if (reservoirA < CAPACITE_RESERVOIR_A) {
                 System.out.println("Remplissage du réservoir A...");
                 reservoirA++;
-                System.out.println("Le réservoir A : " + reservoirA + ", le réservoir B : " + reservoirB);
+                //System.out.println("Le réservoir A : " + reservoirA + ", le réservoir B : " + reservoirB);
             }else{
                 System.out.println("Remplissage du réservoir B...");
                 reservoirB++;
-                System.out.println("Le réservoir A : " + reservoirA + ", le réservoir B : " + reservoirB);
+                //System.out.println("Le réservoir A : " + reservoirA + ", le réservoir B : " + reservoirB);
             }
+            System.out.println("Le réservoir A : " + reservoirA + ", le réservoir B : " + reservoirB);
         }
+        System.out.println("Remplissage terminé!"); //corection: j'avais oublié d'afficher ça à la fin!
     }
 }
