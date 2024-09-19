@@ -15,6 +15,19 @@ public class Devoir03 {
         //System.out.println(nombreDeJoursAnnée);
         int[] tableauAnnée = new int[nombreDeJoursAnnée];
         for (int i = 0; i < tableauAnnée.length; i++) {
+            if (nombreDeJoursAnnée==365){
+                if (mois==4 || mois==6 || mois==9 || mois==11) {
+                    
+                }else if (mois==2) {
+                    
+                }else{ 
+                    
+                }
+                    
+                }
+            }else{
+
+            }
             tableauAnnée[i]= i+1;
         }
     }
