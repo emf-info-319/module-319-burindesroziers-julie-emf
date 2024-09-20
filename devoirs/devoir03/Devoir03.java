@@ -5,15 +5,19 @@ public class Devoir03 {
         int jour=31;
         int mois=12;
         int année=2300;
-        int nombreDeJoursAnnée=365;
+
+        boolean bisextile=false;
         if (année%4==0) {
-            nombreDeJoursAnnée=366;
+            bisextile=true;
             if (année%400!=0) {
-                nombreDeJoursAnnée=365;
+                bisextile=false;
             }
         }
-        //System.out.println(nombreDeJoursAnnée);
-        int nièmeJour=0;
+        int[] tableauMois = new int[12]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        if (bisextile){
+            tableauMois[1]=29;
+        }
+
     
     }
 }
