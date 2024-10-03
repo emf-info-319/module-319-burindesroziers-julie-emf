@@ -1,12 +1,10 @@
-import java.util.Scanner;
-
-public class devoir04 {
+public class Devoir04 {
     public static void main(String[] args) {
         int année = 2012;
         int mois = 4;
         int jour = 30;
 
-        System.out.println("date entrée est le "+jour+"."+mois+"."+année);
+        System.out.println("Date entrée est le "+jour+"."+mois+"."+année);
 
         boolean jourValable=true;
         if (année<0 || année>9999) {
