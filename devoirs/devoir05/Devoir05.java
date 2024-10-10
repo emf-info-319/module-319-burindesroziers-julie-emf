@@ -12,7 +12,10 @@ public class Devoir05 {
          * que le nombre J n'est pas égal au nombre P) ou "Bravo, trouvé !" si J=P.
          * Dans le 1er et 2e cas, le programme demande d'entrer un nombre, le joueur
          * devra re-entrer un nombre.
+         * 
+         * EDIT: Le programme va insulter le joueur s'il entre autre chose qu'un nombre et relance le jeu.
          */
+
         int nbreP = (int) (Math.random() * (100 - 1 + 1)) + 1;
         boolean nombreInvalide = true;
         System.out.println("Jouons à un jeu !");
@@ -33,9 +36,8 @@ public class Devoir05 {
                 System.out.println("Bravo, trouvé ! C'était bien " + nbreP+" !");
                 entree.close();
             } catch (Exception e) {
-                System.out.println("Un nombre espèce de patate !!!");
+                System.out.println("Un NOMBRE espèce de patate !!!");
             }
         }
-
     }
 }
