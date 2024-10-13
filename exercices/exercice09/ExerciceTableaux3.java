@@ -6,11 +6,11 @@ public class ExerciceTableaux3 {
         int[] monTableau= new int[10];
         for (int i = 0; i < monTableau.length; i++) {
             monTableau[i]=( int ) ( Math.random() * ( MAX - MIN + 1 ) ) + MIN;
-            //System.out.println("Cellule "+i+" : "+monTableau[i]);
+            System.out.println("Elève n°"+(i+1)+" : "+monTableau[i]);
             sommeDesNotes+=monTableau[i];
         }
         //System.out.println(sommeDesNotes);
         double moyenneDeClasse=sommeDesNotes/monTableau.length;
-        System.out.println(moyenneDeClasse);
+        System.out.println("Moyenne = "+moyenneDeClasse);
     }
 }

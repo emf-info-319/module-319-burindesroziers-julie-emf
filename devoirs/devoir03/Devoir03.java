@@ -26,7 +26,7 @@ public class Devoir03 {
         do {
             System.out.println("Entrer mois :");
             mois = scanneur.nextInt();
-        } while (mois<0 || mois>12);       
+        } while (mois<1 || mois>12);       
 
         int[] tableauMois = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         if (bisextile) {
@@ -38,7 +38,7 @@ public class Devoir03 {
         do {
             System.out.println("Entrer jour :");
             jour = scanneur.nextInt();  
-        } while (jour<0 || jour>maxJourMois); 
+        } while (jour<1 || jour>maxJourMois);
 
         int nombreJour = 0;
         for (int i = 0; i < (mois - 1); i++) {
