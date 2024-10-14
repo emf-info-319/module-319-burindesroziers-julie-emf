@@ -1,9 +1,13 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class JeuDuPendu {
+
+    public static final Random generateur = new Random();
+    public static final String[] tableauDeMotsATrouver = new String[] { "lapin", "grenouille", "renard", "singe", "cochon", "dragon","serpent", "sanglier", "mouton" }; // mots disponibles
+
     public static void main(String[] args) {
-        String[] tableauDeMotsATrouver = new String[] { "lapin", "grenouille", "renard", "singe", "cochon", "dragon","serpent", "sanglier", "mouton" }; // mots disponibles
-        int index = (int) (Math.random() * (tableauDeMotsATrouver.length)); // choisi le mot
+        int index = generateur.nextInt(tableauDeMotsATrouver.length); // choisi l'index dans le tableau
         String motATrouver = tableauDeMotsATrouver[index];
 
         char[] lettresATrouver = motATrouver.toCharArray(); // transforme le mot en un tableau de char
