@@ -9,6 +9,10 @@ public class ExercicesMethodesTableaux {
         afficherTableau(tableau3);
         int minimum3 = minimumTableau(tableau3);
         int maximum3 = maximumTableau(tableau3);
+        int fréquenceValeur3 = compter(tableau3, maximum3);
+        int somme3 = sommeTableau(tableau3);
+        double moyenne3 = moyenneTableau(tableau3);
+
     }
     public static int[] créerTableauEntiers(int nombreCellules){
         int[] tableau = new int[nombreCellules];
@@ -54,5 +58,25 @@ public class ExercicesMethodesTableaux {
             }
         }
         return maximum;
+    }
+    public static int compter(int[] tableau, int valeur){
+        int fréquence = 0;
+        for (int i = 0; i < tableau.length; i++) {
+            if (valeur == tableau[i]) {
+                fréquence +=1;
+            }
+        }
+        return fréquence;
+    }
+    public static int sommeTableau(int[]tableau){
+        int somme =0;
+        for (int i = 0; i < tableau.length; i++) {
+            somme += tableau[i];
+        }
+        return somme;
+    }
+    public static double moyenneTableau(int[]tableau){
+        double moyenne = sommeTableau(tableau)/tableau.length;
+        return moyenne;
     }
 }
