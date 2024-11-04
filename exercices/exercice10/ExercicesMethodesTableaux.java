@@ -2,17 +2,24 @@ import java.util.Random;
 
 public class ExercicesMethodesTableaux {
     public static void main(String[] args) {
-        int[] tableau1 = créerTableauEntiers(5);
-        int[] tableau2 = remplirValeursFixes(tableau1, 3);
-        int[] tableau3 = remplirValeursAléatoires(tableau1);
-        int taille = déterminerTaille(tableau1);
-        afficherTableau(tableau3);
-        int minimum3 = minimumTableau(tableau3);
-        int maximum3 = maximumTableau(tableau3);
-        int fréquenceValeur3 = compter(tableau3, maximum3);
-        int somme3 = sommeTableau(tableau3);
-        double moyenne3 = moyenneTableau(tableau3);
-
+        int[] tableau = créerTableauEntiers(50);
+        System.out.println("Le tableau a une taille de "+tableau.length+" cellules.\n");
+        remplirValeursAléatoires(tableau);
+        System.out.println("Contenu du tableau aléatoire :");
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.println("tab["+i+"] = "+tableau[i]);
+        }
+        System.out.println("La valeur min trouvée = "+minimumTableau(tableau));
+        System.out.println("La valeur max trouvée = "+maximumTableau(tableau)+"\n");
+        remplacerValeur(tableau, 12, 5);
+        System.out.println("Après remplacement de la valeur 12 par la valeur 5 voici le contenu du >tableau :");
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.println("tab["+i+"] = "+tableau[i]);
+        }
+        System.out.println("\nLa somme des cellules du tableau = "+sommeTableau(tableau));
+        System.out.println("La moyenne des cellules du tableau = "+moyenneTableau(tableau));
+        System.out.println("La valeur 13 a été trouvée à la 1ère position N°"+rechercherPremièreOccurrence(tableau, 13));
+        System.out.println("La valeur 13 a été trouvée à la dernière position N°"+rechercherDernièreOccurrence(tableau, 13));
     }
     public static int[] créerTableauEntiers(int nombreCellules){
         int[] tableau = new int[nombreCellules];
@@ -27,7 +34,7 @@ public class ExercicesMethodesTableaux {
     public static int[] remplirValeursAléatoires(int[] tableau){
         for (int i = 0; i < tableau.length; i++) {
             Random nombre = new Random();
-            tableau[i] = nombre.nextInt(100);
+            tableau[i] = nombre.nextInt(20);
         }
         return tableau;
     }
@@ -68,8 +75,8 @@ public class ExercicesMethodesTableaux {
         }
         return fréquence;
     }
-    public static int sommeTableau(int[]tableau){
-        int somme =0;
+    public static double sommeTableau(int[]tableau){
+        double somme =0;
         for (int i = 0; i < tableau.length; i++) {
             somme += tableau[i];
         }
@@ -78,5 +85,33 @@ public class ExercicesMethodesTableaux {
     public static double moyenneTableau(int[]tableau){
         double moyenne = sommeTableau(tableau)/tableau.length;
         return moyenne;
+    }
+    public static int[] remplacerValeur(int[] tableau, int valeurRechercher, int valeurRemplacement){
+        for (int i = 0; i < tableau.length; i++) {
+            if (valeurRechercher==tableau[i]) {
+                tableau[i]=valeurRemplacement;
+            }
+        }
+        return tableau;
+    }
+    public static int rechercherPremièreOccurrence(int[] tableau, int valeurRechercher){
+        int index = -1;
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i]==valeurRechercher) {
+                index=i;
+                break;
+            }
+        }
+        return index;
+    }
+    public static int rechercherDernièreOccurrence(int[] tableau, int valeurRechercher){
+        int index = -1;
+        for (int i = tableau.length-1; i >= 0; i--) {
+            if (tableau[i]==valeurRechercher) {
+                index=i;
+                break;
+            }
+        }
+        return index;
     }
 }
