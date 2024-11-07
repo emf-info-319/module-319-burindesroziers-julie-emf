@@ -10,7 +10,7 @@ public class Devoir06 {
         }
         System.out.println("La plus petite valeur trouvée est : "+rechercheMin(tableau));
         System.out.println("La plus grande valeur trouvée est : "+rechercheMax(tableau));
-        rechercheValeur(tableau, VALEUR_RECHERCHEE);
+        System.out.println("Le nombre ["+VALEUR_RECHERCHEE+"] figure à la position ["+rechercheValeur(tableau, VALEUR_RECHERCHEE)+"] du tableau");
 
     }
     public static int[] genereTableau(int taille, int min, int max){
@@ -43,38 +43,9 @@ public class Devoir06 {
         for (int i = 0; i < tableau.length; i++) {
             if (tableau[i]==valeurRecherchee) {
                 index=i;
-                System.out.println("Le nombre ["+valeurRecherchee+"] est à la position ["+index+"] du tableau");
+                break;
             }
-        }
-        if (index==-1) {
-            System.out.println("Le nombre ["+valeurRecherchee+"] est à la position ["+index+"] du tableau");
         }
         return index;
     }
 }
-/*Exemple lorsqu'il y a plus d'une occurence:
-Tableau [0] = [20]
-Tableau [1] = [2]
-Tableau [2] = [30]
-Tableau [3] = [30]
-Tableau [4] = [32]
-Tableau [5] = [7]
-Tableau [6] = [21]
-Tableau [7] = [16]
-Tableau [8] = [2]
-Tableau [9] = [40]
-Tableau [10] = [26]
-Tableau [11] = [36]
-Tableau [12] = [35]
-Tableau [13] = [17]
-Tableau [14] = [32]
-Tableau [15] = [20]
-Tableau [16] = [23]
-Tableau [17] = [27]
-Tableau [18] = [7]
-Tableau [19] = [47]
-La plus petite valeur trouvée est : 2
-La plus grande valeur trouvée est : 47
-Le nombre [7] est à la position [5] du tableau
-Le nombre [7] est à la position [18] du tableau
- */
